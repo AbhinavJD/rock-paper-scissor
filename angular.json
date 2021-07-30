@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.styl"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "rock-paper-scissor"
+  "defaultProject": "rock-paper-scissor",
+  "cli": {
+    "analytics": "61b8578c-d751-4c57-a7bb-d99c8cba3e2b"
+  }
 }

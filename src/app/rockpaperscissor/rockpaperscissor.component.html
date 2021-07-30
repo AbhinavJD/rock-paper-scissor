@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+    <div class="page-container">
+        <div class="game-heading">
+            <span class="title">Rock Paper Scissor</span>
+        </div>
+        <div class="dashboard-details ">
+            <div class="score-container">
+                <div class="win-container metric">
+                    <div class="label">Win</div>
+                    <div class="label">{{win}}</div>
+                </div>
+                <div class="lose-container metric">
+                    <div class="label">Lose</div>
+                    <div class="label">{{lose}}</div>
+                </div>
+                <div class="tie-container metric">
+                    <div class="label">Tie</div>
+                    <div class="label">{{tie}}</div>
+                </div>
+            </div>
+            <div class="reset-start">
+                <button type="button" class="btn btn-success" [ngClass]="{disable: startDisableBtn}" (click)="startGame()">Start</button>
+                <button type="button" class="btn btn-warning" [ngClass]="{disable: !startDisableBtn}" (click)="resetGame()">Reset</button>
+            </div>
+        </div>
+        <div class="game-display">
+            <div class="display">
+                <span *ngIf="userChoiceText == undefind && computerChoiceText == undefind">{{currentText}}</span>
+                <span *ngIf="userChoiceText != undefind">{{userChoiceText}}</span>
+                <span *ngIf="computerChoiceText != undefind">{{computerChoiceText}}</span>
+                <span *ngIf="resultText != undefind">{{resultText}}</span>
+            </div>
+        </div>
+        <div class="action-buttons ">
+            <div class="rock button">
+                <button type="button" (click)='userSelected("Rock")' class="btn btn-outline-primary">Rock</button>
+            </div>
+            <div class="paper button">
+                <button type="button" (click)='userSelected("Paper")' class="btn btn-outline-primary">Paper</button>
+            </div>
+            <div class="scissor button">
+                <button type="button" (click)='userSelected("Scissor")' class="btn btn-outline-primary">Scissor</button>
+            </div>
+        </div>
+    </div>
+</div>
